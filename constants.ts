@@ -7,7 +7,7 @@ export const PERMANENT_LETTER: LetterData = {
   parts: [
     {
       id: 1,
-      text: "Nhanh thật…mới đó mà đã 5 tháng từ ngày Tofu đến với tụi mình rồi. Năm tháng qua, mỗi ngày là một bài học em dạy anh - về tình yêu, sự kiên nhẫn, nhân hậu, sức mạnh, và cả sự bền bỉ mà trước đây anh chưa bao giờ nghĩ mình có đủ.",
+      text: "Nhanh thật…mới đó mà đã 5 tháng từ ngày Tofu đến với tụi mình rồi. Năm tháng qua, mỗi ngày là một bài học em dạy anh - về tình yêu, sự kiên nhẫn, kiên trì, sức mạnh, và cả lòng nhân hậu mà trước đây anh chưa bao giờ nghĩ mình có đủ.",
       imageUrl: "https://res.cloudinary.com/dcc0zasye/image/upload/v1765093037/44b2daf9-304d-401c-91e8-8ffd4212c752_uskmfo.jpg"
     },
     {
@@ -22,7 +22,7 @@ export const PERMANENT_LETTER: LetterData = {
     },
     {
       id: 4,
-      text: "Nếu tình yêu cho anh lựa chọn, thì em sẽ mãi là lựa chọn của anh. Nếu thực sự có kiếp sau, anh sẽ vẫn luôn tìm em. Để được yêu em thêm lần nữa. Không chỉ vì những khoảnh khắc đẹp, mà cả những ngày khó khăn. Chỉ cần được em ôm hay nắm tay của em, anh cũng đủ biết rằng: “Em ở đây với anh.” Trong một thế giới đầy lựa chọn, anh vẫn sẽ chọn em thêm một nghìn lần nữa.",
+      text: "Nếu tình yêu cho anh lựa chọn, thì em sẽ mãi là lựa chọn của anh. Nếu thực sự có kiếp sau, anh sẽ vẫn luôn tìm em. Để được yêu em thêm lần nữa. Không chỉ vì những khoảnh khắc đẹp, mà cả những ngày khó khăn. Chỉ cần được ôm hay nắm tay của em, anh cũng đủ biết rằng: “Em ở đây với anh.” Trong một thế giới đầy lựa chọn, anh vẫn sẽ chọn em thêm một nghìn lần nữa.",
       imageUrl: "https://res.cloudinary.com/dcc0zasye/image/upload/v1765093059/18996994-009d-4807-adb3-6065facea83e_klr8dg.jpg"
     },
     {
