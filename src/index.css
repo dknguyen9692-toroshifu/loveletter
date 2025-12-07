@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+    --font-hand: "Patrick Hand", cursive;
+    --font-body: "Nunito", sans-serif;
+    --font-sans: "Nunito", sans-serif;
+
+    --color-paper: #fdfbf7;
+    --color-ink: #4a4a4a;
+    --color-pastelBlue: #a7c7e7;
+    --color-pastelPink: #f4c2c2;
+    --color-pastelGreen: #c1e1c1;
+    --color-pastelYellow: #fdfd96;
+    --color-pastelOrange: #ffdfba;
+}

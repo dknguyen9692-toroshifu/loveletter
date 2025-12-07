@@ -7,12 +7,12 @@ export const PERMANENT_LETTER: LetterData = {
   parts: [
     {
       id: 1,
-      text: "Nhanh thật… mới đó mà đã 5 tháng từ ngày Tofu đến với tụi mình. Năm tháng qua, mỗi ngày là một bài học em dạy anh - về tình yêu, sự kiên nhẫn, nhân hậu, sức mạnh và cả sự bền bỉ mà trước đây anh chưa bao giờ nghĩ mình có đủ.",
+      text: "Nhanh thật… mới đó mà đã 5 tháng từ ngày Tofu đến với tụi mình rồi. Năm tháng qua, mỗi ngày là một bài học em dạy anh - về tình yêu, sự kiên nhẫn, nhân hậu, sức mạnh, và cả sự bền bỉ mà trước đây anh chưa bao giờ nghĩ mình có đủ.",
       imageUrl: "https://res.cloudinary.com/dcc0zasye/image/upload/v1765093037/44b2daf9-304d-401c-91e8-8ffd4212c752_uskmfo.jpg"
     },
     {
       id: 2,
-      text: "Anh vẫn luôn tự nhủ: Yêu em là quyết định dễ dàng nhất trong cuộc đời mình. Và bây giờ anh biết chắc một điều còn lớn lao hơn nữa: Xây dựng gia đình với em là điều anh muốn làm trong suốt phần đời còn lại.",
+      text: "Anh vẫn luôn tự nhủ: Yêu em là quyết định dễ dàng nhất trong cuộc đời mình mà anh đã từng phải đưa ra. Và bây giờ anh biết chắc một điều còn lớn lao hơn nữa: Xây dựng một gia đình nhỏ tràn đầy sự yêu thương và hạnh phúc là điều anh muốn làm với em trong suốt phần đời còn lại.",
       imageUrl: "https://res.cloudinary.com/dcc0zasye/image/upload/v1765093037/50c6f0d7-923c-4027-8654-7f47df5daa3a_fogabq.jpg"
     },
     {
@@ -22,19 +22,19 @@ export const PERMANENT_LETTER: LetterData = {
     },
     {
       id: 4,
-      text: "Nếu tình yêu cho anh lựa chọn, thì anh sẽ luôn chọn em. Nếu thực sự có kiếp sau, anh sẽ luôn tìm em. Để được yêu em thêm lần nữa. Không chỉ vì những khoảnh khắc đẹp, mà cả những ngày khó khăn, khi chỉ cần cái ôm hay cái nắm tay của em cũng đủ để anh biết: “Em ở đây với anh.” Trong một thế giới đầy lựa chọn, anh vẫn sẽ chọn em một nghìn lần nữa.",
+      text: "Nếu tình yêu cho anh lựa chọn, thì em sẽ mãi là lựa chọn của anh. Nếu thực sự có kiếp sau, anh sẽ vẫn luôn tìm em. Để được yêu em thêm lần nữa. Không chỉ vì những khoảnh khắc đẹp, mà cả những ngày khó khăn. Chỉ cần được em ôm hay nắm tay của em, anh cũng đủ biết rằng: “Em ở đây với anh.” Trong một thế giới đầy lựa chọn, anh vẫn sẽ chọn em thêm một nghìn lần nữa.",
       imageUrl: "https://res.cloudinary.com/dcc0zasye/image/upload/v1765093059/18996994-009d-4807-adb3-6065facea83e_klr8dg.jpg"
     },
     {
       id: 5,
-      text: "Anh tự hào về em - về hành trình em đã đi, về những điều em vượt qua mà không phải ai cũng nhìn thấy. Có lúc em nghi ngờ bản thân, nhưng nhìn xem, em đã mạnh mẽ đến thế nào. Và anh biết em sẽ còn đi xa hơn nữa.",
+      text: "Anh tự hào về em lắm - về hành trình em đã đi, về những điều em vượt qua mà không phải ai cũng nhìn thấy. Đã có những lúc em nghi ngờ bản thân, và hãy nhìn xem, em đã mạnh mẽ đến thế nào. Và anh biết em sẽ còn đi xa hơn nữa.",
       imageUrl: "https://res.cloudinary.com/dcc0zasye/image/upload/v1765093037/3ea5d5c8-bbda-400e-98cf-2ddb3318d36c_u1sbof.jpg"
     },
     {
       id: 6,
-      text: "Cảm ơn em vì đã đến bên anh, vì đã cho anh một gia đình mà anh chưa từng nghĩ mình đủ may mắn để có. Yêu em và yêu mấy thằng nhỏ, nó không chỉ là cảm xúc - mà là lựa chọn anh sẽ làm hôm nay, ngày mai, và tất cả những ngày tiếp theo.",
+      text: "Cảm ơn em vì đã đến bên anh, vì đã cho anh một gia đình thật sự hạnh phúc. Yêu em và yêu mấy thằng nhỏ, nó không chỉ là cảm xúc - mà là lựa chọn anh sẽ làm hôm nay, ngày mai, và tất cả những ngày tiếp theo - forever and always.",
       imageUrl: "https://res.cloudinary.com/dcc0zasye/image/upload/v1765093036/0ef30d1c-e797-438c-ae70-6106864980ae_ypeyjx.jpg"
     }
-    
+
   ]
 };
