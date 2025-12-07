@@ -7,7 +7,7 @@ export const PERMANENT_LETTER: LetterData = {
   parts: [
     {
       id: 1,
-      text: "Nhanh thật… mới đó mà đã 5 tháng từ ngày Tofu đến với tụi mình rồi. Năm tháng qua, mỗi ngày là một bài học em dạy anh - về tình yêu, sự kiên nhẫn, nhân hậu, sức mạnh, và cả sự bền bỉ mà trước đây anh chưa bao giờ nghĩ mình có đủ.",
+      text: "Nhanh thật…mới đó mà đã 5 tháng từ ngày Tofu đến với tụi mình rồi. Năm tháng qua, mỗi ngày là một bài học em dạy anh - về tình yêu, sự kiên nhẫn, nhân hậu, sức mạnh, và cả sự bền bỉ mà trước đây anh chưa bao giờ nghĩ mình có đủ.",
       imageUrl: "https://res.cloudinary.com/dcc0zasye/image/upload/v1765093037/44b2daf9-304d-401c-91e8-8ffd4212c752_uskmfo.jpg"
     },
     {
