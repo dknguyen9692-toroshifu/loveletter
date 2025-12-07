@@ -15,11 +15,15 @@ export const LetterSection: React.FC<LetterSectionProps> = ({ text, imageUrl, in
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
+          // Once visible, we don't need to observe anymore
+          observer.disconnect();
         }
       },
       {
-        threshold: 0.3,
-        rootMargin: "0px 0px -100px 0px" 
+        // For the first item, trigger as soon as 10% is visible (0.1) and don't use negative margin.
+        // For others, wait for 25% (0.25) and use negative margin for a better "scroll-into-view" effect.
+        threshold: index === 0 ? 0.1 : 0.25,
+        rootMargin: index === 0 ? "0px 0px 0px 0px" : "0px 0px -100px 0px" 
       }
     );
 
@@ -28,11 +32,9 @@ export const LetterSection: React.FC<LetterSectionProps> = ({ text, imageUrl, in
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
+      observer.disconnect();
     };
-  }, []);
+  }, [index]);
 
   const isEven = index % 2 === 0;
 
@@ -55,6 +57,8 @@ export const LetterSection: React.FC<LetterSectionProps> = ({ text, imageUrl, in
                      <img 
                         src={imageUrl} 
                         alt="Illustration" 
+                        loading={index === 0 ? "eager" : "lazy"} // Prioritize loading the first image
+                        decoding="async"
                         className="w-full h-full object-cover transition-all duration-700 grayscale-0 opacity-100"
                     />
                     <div className="absolute inset-0 border-4 border-white/50 pointer-events-none"></div>
