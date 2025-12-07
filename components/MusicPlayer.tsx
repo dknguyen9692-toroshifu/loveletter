@@ -7,7 +7,10 @@ interface MusicPlayerProps {
 export const MusicPlayer: React.FC<MusicPlayerProps> = ({ url }) => {
     const audioRef = useRef<HTMLAudioElement | null>(null);
     const [isPlaying, setIsPlaying] = useState(false);
-    const isAttemptingPlay = useRef(false);
+    
+    // Track if we should keep trying to auto-play. 
+    // Once the user interacts manually, we stop trying to auto-play.
+    const shouldAutoPlay = useRef(true);
 
     useEffect(() => {
         if (!url) return;
@@ -19,37 +22,44 @@ export const MusicPlayer: React.FC<MusicPlayerProps> = ({ url }) => {
         audio.preload = 'auto'; 
         audioRef.current = audio;
 
+        const opts = { passive: true, capture: true };
+
         // Function to attempt playback
         const attemptPlay = async () => {
-            if (!audioRef.current || isPlaying || isAttemptingPlay.current) return;
+            // Stop if audio isn't ready or if auto-play is disabled by user interaction
+            if (!audioRef.current || !shouldAutoPlay.current) return;
             
-            isAttemptingPlay.current = true;
-            
+            // If already playing, just ensure state is correct and stop trying
+            if (!audioRef.current.paused) {
+                setIsPlaying(true);
+                shouldAutoPlay.current = false;
+                cleanupListeners();
+                return;
+            }
+
             try {
                 await audioRef.current.play();
                 setIsPlaying(true);
+                // If successful, we don't need to keep trying
+                shouldAutoPlay.current = false;
                 cleanupListeners();
             } catch (error) {
-                // Autoplay was likely prevented. 
-                // We swallow the error and keep listeners active for the next interaction.
-            } finally {
-                isAttemptingPlay.current = false;
+                // Autoplay was prevented. We keep the listeners active for the next interaction.
             }
         };
 
         const cleanupListeners = () => {
-            window.removeEventListener('click', attemptPlay);
-            window.removeEventListener('keydown', attemptPlay);
-            window.removeEventListener('touchstart', attemptPlay);
-            window.removeEventListener('touchmove', attemptPlay);
-            window.removeEventListener('scroll', attemptPlay);
-            window.removeEventListener('wheel', attemptPlay);
-            window.removeEventListener('pointerdown', attemptPlay);
-            window.removeEventListener('mousedown', attemptPlay);
+            window.removeEventListener('click', attemptPlay, opts);
+            window.removeEventListener('keydown', attemptPlay, opts);
+            window.removeEventListener('touchstart', attemptPlay, opts);
+            window.removeEventListener('touchmove', attemptPlay, opts);
+            window.removeEventListener('scroll', attemptPlay, opts);
+            window.removeEventListener('wheel', attemptPlay, opts);
+            window.removeEventListener('pointerdown', attemptPlay, opts);
+            window.removeEventListener('mousedown', attemptPlay, opts);
         };
 
         // Add global listeners to catch the first user interaction
-        const opts = { passive: true, capture: true };
         window.addEventListener('click', attemptPlay, opts);
         window.addEventListener('keydown', attemptPlay, opts);
         window.addEventListener('touchstart', attemptPlay, opts);
@@ -73,6 +83,9 @@ export const MusicPlayer: React.FC<MusicPlayerProps> = ({ url }) => {
 
     const togglePlay = (e: React.MouseEvent) => {
         e.stopPropagation(); 
+        
+        // Disable future auto-play attempts since user is taking manual control
+        shouldAutoPlay.current = false;
 
         if (!audioRef.current) return;
 
@@ -109,17 +122,9 @@ export const MusicPlayer: React.FC<MusicPlayerProps> = ({ url }) => {
                 </svg>
              ) : (
                 // Play Icon
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 ml-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 pl-1">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
                 </svg>
-             )}
-             
-             {/* Musical Note Particles Animation (only when playing) */}
-             {isPlaying && (
-                 <>
-                    <span className="absolute -top-2 right-0 text-xs text-pastelGreen animate-[ping_2s_ease-in-out_infinite] opacity-75">♪</span>
-                    <span className="absolute top-0 -left-2 text-xs text-pastelGreen animate-[bounce_3s_infinite] delay-100 opacity-60">♫</span>
-                 </>
              )}
         </button>
     );
