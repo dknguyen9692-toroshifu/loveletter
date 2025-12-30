@@ -28,7 +28,7 @@ const App: React.FC = () => {
             {letterData.title}
           </h1>
           <p className="font-hand text-xl text-stone-500 animate-bounce mt-10">
-            Click một cái để vừa scroll vừa nghe nhạc nha :)
+            Vừa scroll vừa nghe nhạc vừa chill nha :)
           </p>
         </header>
 
