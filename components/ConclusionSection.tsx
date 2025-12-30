@@ -9,7 +9,7 @@ export const ConclusionSection: React.FC = () => {
                         <h2 className="font-hand text-3xl md:text-4xl text-ink mb-8">First there were only two of us...</h2>
                         <div className="w-full relative overflow-hidden rounded-2xl shadow-lg aspect-[3/4] md:aspect-auto md:flex-1">
                             <img
-                                src="https://res.cloudinary.com/dcc0zasye/image/upload/v1767064089/download-2_j2ftsc.jpg"
+                                src="https://res.cloudinary.com/dcc0zasye/image/upload/v1767064887/fec1e2ae-8fd6-4a7c-9c95-bd126771d165_v1gnbl.jpg"
                                 alt="First there were only two of us"
                                 className="w-full h-full object-cover md:absolute md:inset-0"
                             />
